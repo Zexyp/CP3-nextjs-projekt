@@ -1,3 +1,4 @@
+/*
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
@@ -110,5 +111,28 @@ export default function Home() {
         </div>
       </main>
     </>
+  )
+}
+*/
+
+import {Button, Checkbox, Container} from "@mui/material";
+import React, {useState} from "react";
+import Entity from "@/components/Entity";
+import Canvas, {EntityData} from "@/components/Canvas";
+
+
+
+let ent = new EntityData()
+ent.content = <><Checkbox/><span>sus</span></>
+export default function Test() {
+  return (
+      <>
+        <div style={{"width": "100%", "height": "100vh"}}>
+          <Canvas data={[
+            EntityData.createImage('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wwuP'),
+            EntityData.createColumn({heading: "heading", tasks: [{title: "title1", checked: false}, {title: "title2", checked: true}]})
+          ]}></Canvas>
+        </div>
+      </>
   )
 }
