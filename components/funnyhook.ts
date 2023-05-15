@@ -1,3 +1,5 @@
+// stolen code - too lazy to npm install
+
 import { useCallback, useState } from 'react'
 
 import { RefObject, useEffect, useRef, useLayoutEffect } from 'react'
