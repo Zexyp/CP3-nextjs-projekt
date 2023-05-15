@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack: function (config, options) {
-    config.experiments = {
+    config.experiments = {...config.experiments,
       topLevelAwait: true
     }
     return config;
