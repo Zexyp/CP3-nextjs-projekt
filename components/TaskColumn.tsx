@@ -22,12 +22,14 @@ export default function TaskColumn(props: TaskColumnPropsInterface) {
     function taskRemove(i) {
         tasks.splice(i, 1)
         setTasks([...tasks])
+        props.data.tasks = tasks
         props.onUpdate()
     }
 
     function taskAdd() {
         tasks.push(new TaskData())
         setTasks([...tasks])
+        props.data.tasks = tasks
         props.onUpdate()
     }
 
