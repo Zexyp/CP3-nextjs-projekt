@@ -240,7 +240,7 @@ export default function Home() {
 
                                         let reader = new FileReader();
                                         reader.onload = async () => {
-                                            data.src = reader.result
+                                            data.src = reader.result.toString()
                                             console.log(data.src)
 
                                             await createEnt(EntityData.createImage(data))
